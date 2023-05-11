@@ -14,6 +14,7 @@ function power(n) {
         }
     }
 }
+// Big O : O(square(n))
 
 console.log(power(1))
 console.log(power(2))
