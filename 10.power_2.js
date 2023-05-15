@@ -1,3 +1,4 @@
+// Big O : O(square(n))
 function power(n) {
 
     if (n < 2 || n % 2 != 0) {
@@ -14,7 +15,6 @@ function power(n) {
         }
     }
 }
-// Big O : O(square(n))
 
 console.log(power(1))
 console.log(power(2))
