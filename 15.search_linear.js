@@ -2,16 +2,15 @@
 
 const arr = [-5, 2, 10, 4, 6]
 
-function find(n) {
-
-    for (let i = 0; i < arr.length; i++) {
-        if (n === arr[i]) {
-            return `${n} is at ${i} index`
+function find(target, arr) {
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (target === arr[i]) {
+            return `number ${target} is at index ${i}`
         }
     }
-    return `the number ${n} doesnt exist within array`
+    return `${target} not found`
 }
 
-console.log(find(10))
-console.log(find(6))
-console.log(find(20))
+console.log(find(10, [-5, 2, 10, 4, 6]))
+console.log(find(6, [-5, 2, 10, 4, 6]))
+console.log(find(20, [-5, 2, 10, 4, 6]))
