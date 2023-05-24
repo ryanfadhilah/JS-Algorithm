@@ -2,18 +2,18 @@
 function binary_search(arr, target) {
     let left = 0
     let right = arr.length - 1
-    while (left <= right) {
-        let middle = Math.floor((left + right) / 2)
-        if (target === arr[middle]) {
-            return `Number: ${target} is at index ${middle} of the array`
+    for (let i = 0; i <= arr.length - 1; i++) {
+        let mid = Math.floor((left + right) / 2)
+        if (target === arr[mid]) {
+            return `Number ${target} is at index ${mid}`
         }
-        if (target < arr[middle]) {
-            right = middle - 1
+        if (target <= arr[mid]) {
+            right = mid - 1
         } else {
-            left = middle + 1
+            left = mid + 1
         }
     }
-    return `Number: ${target} NOT FOUND`
+    return `num ${target} doesnt exist`
 }
 
 console.log(binary_search([-5, 2, 4, 6, 10], -5))
