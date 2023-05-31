@@ -17,22 +17,29 @@ console.log(primeCheck(15))
 // lecturer Solution
 // Big-O = O(n)
 function lecturer(n) {
-    if (n < 2) {
-        return `L: ${n} is a prime number`
+    if (n < 1) {
+        return `everything below 2 is a prime number`
     }
-    for (let i = 2; i < n; i++) {
+    for (let i = 2; i < n / 2; i++) {
         if (n % i === 0) {
-            return `L: ${n} is not a prime number`
+            return `${n} Is not a prime Number`
         }
     }
-    return `L: ${n} is a prime number`
+    return `${n} is a prime number`
 }
-console.log(lecturer(7))
-console.log(lecturer(8))
-console.log(lecturer(9))
-console.log(lecturer(11))
-console.log(lecturer(13))
-console.log(lecturer(15))
+console.log("Lecturer: " + lecturer(2))
+console.log("Lecturer: " + lecturer(3))
+console.log("Lecturer: " + lecturer(5))
+console.log("Lecturer: " + lecturer(7))
+console.log("Lecturer: " + lecturer(8))
+console.log("Lecturer: " + lecturer(9))
+console.log("Lecturer: " + lecturer(11))
+console.log("Lecturer: " + lecturer(13))
+console.log("Lecturer: " + lecturer(15))
+console.log("Lecturer: " + lecturer(51))
+console.log("Lecturer: " + lecturer(83))
+console.log("Lecturer: " + lecturer(89))
+console.log("Lecturer: " + lecturer(97))
 
 // More Optimized Solution
 // Big-O = O(square(n))

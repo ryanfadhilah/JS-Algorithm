@@ -1,5 +1,4 @@
 
-
 function insertion(arr) {
     for (let i = 1; i < arr.length; i++) {
         let sorted = i - 1

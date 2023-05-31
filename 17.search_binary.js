@@ -1,19 +1,20 @@
 // Big O : O(logn) 
 function binary_search(arr, target) {
-    let left = 0
-    let right = arr.length - 1
-    for (let i = 0; i <= arr.length - 1; i++) {
-        let mid = Math.floor((left + right) / 2)
+    let start = 0
+    let end = arr.length
+    for (let i = 0; i < arr.length; i++) {
+        let mid = Math.floor((start + end) / 2)
         if (target === arr[mid]) {
-            return `Number ${target} is at index ${mid}`
+            return `${target} : index ${mid}`
         }
-        if (target <= arr[mid]) {
-            right = mid - 1
-        } else {
-            left = mid + 1
+        if (target > arr[mid]) {
+            start = mid + 1
+        }
+        else {
+            end = mid - 1
         }
     }
-    return `num ${target} doesnt exist`
+    return `${target} NOT FOUND`
 }
 
 console.log(binary_search([-5, 2, 4, 6, 10], -5))

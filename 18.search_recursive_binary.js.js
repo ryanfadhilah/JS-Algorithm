@@ -1,19 +1,19 @@
 function recursive_binary(arr, target) {
-    return search(arr, target, 0, arr.length - 1)
+    return search(arr, target, 0, arr.length)
 }
 
 function search(arr, target, start, end) {
     if (start > end) {
-        return `${target} : NOT FOUND`
+        return `Target ${target} :  NOTFOUND`
     }
     let mid = Math.floor((start + end) / 2)
     if (target === arr[mid]) {
-        return `${target} : Index ${mid}`
+        return `Target ${target} : Index ${mid}`
     }
-    if (target < arr[mid]) {
-        return search(arr, target, start, mid - 1)
-    } else {
+    if (target > arr[mid]) {
         return search(arr, target, mid + 1, end)
+    } else {
+        return search(arr, target, start, mid - 1)
     }
 }
 

@@ -1,23 +1,24 @@
+// Descending 
 const factorial = (n) => {
-    let count = n
+    let temp = n
     for (let i = 1; i < n; i++) {
-        count = count * (n - i)
+        temp = temp * (n - i)
     }
-    return count
+    return temp
 }
 
-console.log(factorial(2)) // 2
-console.log(factorial(3)) // 6
-console.log(factorial(4)) // 24
-console.log(factorial(5)) // 120
+console.log("Descending: " + factorial(2)) // 2
+console.log("Descending: " + factorial(3)) // 6
+console.log("Descending: " + factorial(4)) // 24
+console.log("Descending: " + factorial(5)) // 120
 
 
 // LECTURER SOLUTION
-
+// Ascending
 
 function lecture(n) {
     let count = 1
-    for (let i = 2; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         count = count * i
     }
     return count
