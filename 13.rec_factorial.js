@@ -6,7 +6,7 @@
 // 1 = 1
 
 function rec_factorial(n) {
-    if (n < 1) {
+    if (n === 0) {
         return 1
     }
     return n * rec_factorial(n - 1)

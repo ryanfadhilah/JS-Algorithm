@@ -17,15 +17,18 @@ console.log(primeCheck(15))
 // lecturer Solution
 // Big-O = O(n)
 function lecturer(n) {
-    if (n < 1) {
-        return `everything below 2 is a prime number`
+
+    if (n < 2) {
+        `${n} : Below two is not a prime number`
     }
-    for (let i = 2; i < n / 2; i++) {
+
+    for (let i = 2; i < n; i++) {
         if (n % i === 0) {
-            return `${n} Is not a prime Number`
+            return `${n} NOT PRIME`
         }
     }
     return `${n} is a prime number`
+
 }
 console.log("Lecturer: " + lecturer(2))
 console.log("Lecturer: " + lecturer(3))

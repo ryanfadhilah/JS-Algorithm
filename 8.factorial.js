@@ -1,10 +1,10 @@
 // Descending 
 const factorial = (n) => {
-    let temp = n
+    let count = n
     for (let i = 1; i < n; i++) {
-        temp = temp * (n - i)
+        count = count * (n - i)
     }
-    return temp
+    return count
 }
 
 console.log("Descending: " + factorial(2)) // 2

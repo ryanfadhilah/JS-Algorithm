@@ -1,15 +1,16 @@
 // Big O : O(square(n))
 function power(n) {
-    let count = n
-    if (n % 2 !== 0 || n < 1) {
-        return `${n} is not a square root of 2`
+    if (n < 2 || n % 2 === 1) {
+        return `${n} NOT SQUARE ROOT`
     }
+    let temp = n
     for (let i = 1; i < n; i++) {
-        count = count / 2
-        if (count == 1) {
-            return `${n} : square root of ${i} `
+        temp = temp / 2
+        if (temp === 1) {
+            return `${n} is square root of ${i}`
         }
     }
+    return `${n} NOT SQUARE ROOT`
 }
 
 

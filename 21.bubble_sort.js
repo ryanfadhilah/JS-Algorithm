@@ -13,6 +13,7 @@ function bubble_sort(arr) {
             }
         }
     } while (repeat);
+
 }
 
 const arr = [8, 20, -2, 4, 6]
